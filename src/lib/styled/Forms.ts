@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { animations, cssSize, screenSize } from 'src/styles/utils';
+import { cssSize, screenSize } from 'src/styles/utils';
 
 export const Form = styled.form<Props.CssProps>(
   () => css`
@@ -10,7 +10,6 @@ export const Form = styled.form<Props.CssProps>(
     margin: auto;
     gap: ${cssSize(6)};
     width: ${cssSize(200)};
-    animation: ${animations.fadeUp} 0.5s ease-out;
 
     h1 {
       text-align: center;

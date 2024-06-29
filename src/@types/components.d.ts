@@ -9,7 +9,8 @@ declare namespace Props {
     maxh?: string;
     p?: string;
     m?: string;
-    mb?: number;
+    mb?: string;
+    mt?: string;
     left?: boolean;
     right?: boolean;
     top?: boolean;
@@ -68,5 +69,29 @@ declare namespace Props {
   type FileUploadModal = {
     show: boolean;
     onClose: () => void;
+  };
+
+  type InputField = {
+    type:
+      | 'text'
+      | 'password'
+      | 'radio'
+      | 'password'
+      | 'checkbox'
+      | 'number'
+      | 'switch'
+      | 'textarea'
+      | 'range';
+    label?: string;
+    placeholder?: string;
+    value?: string;
+    onChange?: (value: string) => void;
+    actived?: boolean;
+    IconLeft?: React.ReactNode;
+    IconRight?: React.ReactNode;
+  };
+
+  type Form<T> = {
+    onSubmit?: (form: T) => void;
   };
 }

@@ -74,3 +74,12 @@ export const Box = styled.div<Props.CssProps>(
     }
   `,
 );
+
+export const Space = styled.div<Props.CssProps>(
+  ({ m, mt, mb, p }) => css`
+    margin: ${m ?? 0};
+    padding: ${p ?? 0};
+    margin-top: ${mt ?? 0};
+    margin-bottom: ${mb ?? 0};
+  `,
+);
