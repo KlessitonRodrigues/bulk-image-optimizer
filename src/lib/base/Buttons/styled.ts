@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { cssSize } from 'src/styles/utils';
 
-export const RoundedBtn = styled.button<Props.CssProps>(
+export const DefaultButton = styled.button<Props.CssProps>(
   ({ theme, w, h, p }) => css`
     display: flex;
     align-items: center;
@@ -18,6 +18,7 @@ export const RoundedBtn = styled.button<Props.CssProps>(
     font-size: ${theme.fontSize.label};
     font-weight: bold;
     transition: opacity 0.2s;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.7;
@@ -25,35 +26,29 @@ export const RoundedBtn = styled.button<Props.CssProps>(
 
     &:disabled {
       background-color: ${theme.colors.gray};
+      cursor: not-allowed;
     }
   `,
 );
 
-export const MainRoundedBtn = styled(RoundedBtn)(
+export const MainButton = styled(DefaultButton)(
   ({ theme }) => css`
     background-color: ${theme.colors.mainBg};
     color: ${theme.colors.mainText};
   `,
 );
 
-export const DangerRoundedBtn = styled(RoundedBtn)(
+export const DangerButton = styled(DefaultButton)(
   ({ theme }) => css`
     background-color: ${theme.colors.red};
     color: ${theme.colors.mainText};
   `,
 );
 
-export const OutlineBtn = styled(RoundedBtn)(
-  ({ theme, w }) => css`
-    width: ${w ?? 'fit-content'};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: ${cssSize(2)};
+export const OutlineButton = styled(DefaultButton)(
+  ({ theme }) => css`
     color: ${theme.colors.text1};
     box-shadow: none;
-    cursor: pointer;
-
     &:disabled {
       background-color: transparent;
       color: ${theme.colors.text3};

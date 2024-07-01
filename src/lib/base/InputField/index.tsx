@@ -1,5 +1,3 @@
-import { IoCheckmarkOutline } from 'react-icons/io5';
-
 import {
   CheckBox,
   Input,
@@ -82,14 +80,12 @@ const InputField = (props: Props.InputField) => {
     return (
       <Label>
         <b>{label}</b>
-        <Row>
-          <small>{value}%</small>
-          <RangeInput
-            type="range"
-            value={value}
-            onChange={ev => onChange && onChange(ev.target.value)}
-          />
-        </Row>
+        <h5>{value}%</h5>
+        <RangeInput
+          type="range"
+          value={value}
+          onChange={ev => onChange && onChange(ev.target.value)}
+        />
       </Label>
     );
   }
@@ -109,7 +105,7 @@ const InputField = (props: Props.InputField) => {
     return (
       <Label onClick={() => onChange && onChange('')}>
         <Row>
-          <CheckBox active={actived}>{actived && <IoCheckmarkOutline size={14} />}</CheckBox>
+          <CheckBox active={actived}>{actived && '✔'}</CheckBox>
           <b>{label}</b>
         </Row>
       </Label>

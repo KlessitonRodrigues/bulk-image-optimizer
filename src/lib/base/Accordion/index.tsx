@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
-import { AccordionContainer, AccordionContent, AccordionHeader } from 'src/lib/styled/Accordion';
-import { Hr } from 'src/lib/styled/Divisors';
+import {
+  AccordionContainer,
+  AccordionContent,
+  AccordionHeader,
+} from 'src/lib/base/Styled/Accordion';
+import { Hr } from 'src/lib/base/Styled/Divisors';
 
 import Icons from '../Icons';
 import If from '../If';

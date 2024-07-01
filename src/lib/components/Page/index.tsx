@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { PageContainer, PageContent } from 'src/lib/styled/Containers';
+import { PageContainer, PageContent } from 'src/lib/base/Styled/Containers';
 
 const Page = (props: PropsWithChildren) => {
   const { children } = props;

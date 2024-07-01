@@ -1,15 +1,14 @@
 import { DragEventHandler, useMemo, useState } from 'react';
 
 import useImages from 'src/hooks/useImages';
+import Button from 'src/lib/base/Buttons';
 import Icons from 'src/lib/base/Icons';
 import If from 'src/lib/base/If';
-import { MainRoundedBtn, OutlineBtn } from 'src/lib/styled/Buttons';
-import { Card } from 'src/lib/styled/Containers';
-import { Hr } from 'src/lib/styled/Divisors';
-import { Column, Row } from 'src/lib/styled/Flex';
-import { Image } from 'src/lib/styled/Images';
-import { Modal, ModalContent } from 'src/lib/styled/Modal';
-import { VerySmall } from 'src/lib/styled/Typograph';
+import { Card } from 'src/lib/base/Styled/Containers';
+import { Column, Row } from 'src/lib/base/Styled/Flex';
+import { Image } from 'src/lib/base/Styled/Images';
+import { Modal, ModalContent } from 'src/lib/base/Styled/Modal';
+import { VerySmall } from 'src/lib/base/Styled/Typograph';
 import { limitString } from 'src/utils/string';
 
 import { DropBox } from './styled';
@@ -98,14 +97,20 @@ const FileUpdaloadModal = (props: Props.FileUploadModal) => {
           </DropBox>
 
           <Row right gap={4}>
-            <OutlineBtn disabled={!files.length} onClick={() => setFiles([])}>
-              <Icons size={6} type="close" />
-              Clean
-            </OutlineBtn>
-            <MainRoundedBtn disabled={!files.length} onClick={setImageFiles}>
-              <Icons size={6} type="image" />
-              Upload
-            </MainRoundedBtn>
+            <Button
+              type="outline"
+              label="Clean"
+              IconLeft={<Icons size={6} type="close" />}
+              disabled={!files.length}
+              onClick={() => setFiles([])}
+            />
+            <Button
+              type="main"
+              label="Upload"
+              IconLeft={<Icons size={6} type="image" />}
+              disabled={!files.length}
+              onClick={setImageFiles}
+            />
           </Row>
         </Card>
       </ModalContent>

@@ -1,4 +1,4 @@
-import { Column } from 'src/lib/styled/Flex';
+import { Column } from 'src/lib/base/Styled/Flex';
 import { getText } from 'src/utils/i18n';
 
 import Icons from '../Icons';

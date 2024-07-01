@@ -2,15 +2,15 @@ import { useState } from 'react';
 
 import Icons from 'src/lib/base/Icons';
 import InputField from 'src/lib/base/InputField';
-import { Space } from 'src/lib/styled/Containers';
-import { Row } from 'src/lib/styled/Flex';
-import { FormLarge } from 'src/lib/styled/Forms';
+import { Space } from 'src/lib/base/Styled/Containers';
+import { Row } from 'src/lib/base/Styled/Flex';
+import { FormLarge } from 'src/lib/base/Styled/Forms';
 
 const initiatState = {
   quality: '60',
-  width: '60',
-  height: '60',
-  keepRatio: false,
+  width: '1280',
+  height: '720',
+  keepRatio: true,
 };
 
 const ImageSettingsForm = (props: Props.Form<typeof initiatState>) => {

@@ -1,7 +1,7 @@
 import Icons from 'src/lib/base/Icons';
-import { Card, Section } from 'src/lib/styled/Containers';
-import { Hr } from 'src/lib/styled/Divisors';
-import { Row } from 'src/lib/styled/Flex';
+import { Card, Section } from 'src/lib/base/Styled/Containers';
+import { Hr } from 'src/lib/base/Styled/Divisors';
+import { Row } from 'src/lib/base/Styled/Flex';
 
 const UdemyCertificates = () => {
   return (

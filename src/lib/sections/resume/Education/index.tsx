@@ -1,8 +1,8 @@
+import { Card, Section } from 'src/lib/base/Styled/Containers';
+import { Hr } from 'src/lib/base/Styled/Divisors';
+import { Column, Row } from 'src/lib/base/Styled/Flex';
+import { List, ListItem } from 'src/lib/base/Styled/List';
 import Text from 'src/lib/base/Text';
-import { Card, Section } from 'src/lib/styled/Containers';
-import { Hr } from 'src/lib/styled/Divisors';
-import { Column, Row } from 'src/lib/styled/Flex';
-import { List, ListItem } from 'src/lib/styled/List';
 
 const ProfileEducation = () => {
   return (

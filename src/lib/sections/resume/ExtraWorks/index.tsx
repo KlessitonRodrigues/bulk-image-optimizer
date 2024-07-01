@@ -1,8 +1,8 @@
 import Icons from 'src/lib/base/Icons';
+import { Box, Card, Section } from 'src/lib/base/Styled/Containers';
+import { Hr } from 'src/lib/base/Styled/Divisors';
+import { Column, Grid, Row } from 'src/lib/base/Styled/Flex';
 import Text from 'src/lib/base/Text';
-import { Box, Card, Section } from 'src/lib/styled/Containers';
-import { Hr } from 'src/lib/styled/Divisors';
-import { Column, Grid, Row } from 'src/lib/styled/Flex';
 import { urls } from 'src/utils/constants/urls';
 
 const ProfileExtraWorks = () => {

@@ -85,10 +85,19 @@ declare namespace Props {
     label?: string;
     placeholder?: string;
     value?: string;
-    onChange?: (value: string) => void;
     actived?: boolean;
     IconLeft?: React.ReactNode;
     IconRight?: React.ReactNode;
+    onChange?: (value: string) => void;
+  };
+
+  type Button = {
+    type: 'default' | 'main' | 'outline' | 'danger';
+    label?: string;
+    disabled?: boolean;
+    IconLeft?: React.ReactNode;
+    IconRight?: React.ReactNode;
+    onClick?: () => void;
   };
 
   type Form<T> = {

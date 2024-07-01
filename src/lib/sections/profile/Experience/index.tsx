@@ -2,11 +2,11 @@ import { useMemo } from 'react';
 
 import Icons from 'src/lib/base/Icons';
 import If from 'src/lib/base/If';
+import { Box, Card, Section } from 'src/lib/base/Styled/Containers';
+import { Hr } from 'src/lib/base/Styled/Divisors';
+import { Column, Grid, Row } from 'src/lib/base/Styled/Flex';
+import { ProgressStep, ProgressStepBox } from 'src/lib/base/Styled/Progress';
 import Text from 'src/lib/base/Text';
-import { Box, Card, Section } from 'src/lib/styled/Containers';
-import { Hr } from 'src/lib/styled/Divisors';
-import { Column, Grid, Row } from 'src/lib/styled/Flex';
-import { ProgressStep, ProgressStepBox } from 'src/lib/styled/Progress';
 import { experienceMap } from 'src/utils/constants/experienceMap';
 import { yearsFrom } from 'src/utils/dates';
 

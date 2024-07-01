@@ -1,10 +1,10 @@
 import Accordion from 'src/lib/base/Accordion';
 import Icons from 'src/lib/base/Icons';
+import { Card, Section } from 'src/lib/base/Styled/Containers';
+import { Hr } from 'src/lib/base/Styled/Divisors';
+import { Row } from 'src/lib/base/Styled/Flex';
+import { Image } from 'src/lib/base/Styled/Images';
 import Text from 'src/lib/base/Text';
-import { Card, Section } from 'src/lib/styled/Containers';
-import { Hr } from 'src/lib/styled/Divisors';
-import { Row } from 'src/lib/styled/Flex';
-import { Image } from 'src/lib/styled/Images';
 import schoolImg from 'src/public/images/diploma_medio-min.jpg';
 
 const AcademyCertificates = () => {

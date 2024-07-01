@@ -21,6 +21,7 @@ export const Label = styled.label(
     gap: ${cssSize(2)};
     cursor: pointer;
     font-size: ${theme.fontSize.label};
+    user-select: none;
 
     &:hover b {
       color: ${theme.colors.main};
@@ -109,7 +110,8 @@ export const RangeInput = styled.input(
     appearance: none;
     background: ${theme.colors.bg4};
     border-radius: ${theme.radius.medium};
-    margin: ${cssSize(5)} 0;
+    margin: ${cssSize(1)} 0 ${cssSize(3)};
+    position: relative;
 
     &::-webkit-slider-thumb {
       appearance: none;
@@ -145,8 +147,9 @@ export const CheckBox = styled.div<Props.CssProps>(
     margin-top: ${cssSize(0.5)};
     border-radius: 4px;
     border: ${theme.border.small};
-    color: ${theme.colors.mainBg};
-    ${active && `border-color: ${theme.colors.main}`}
+    font-size: ${theme.fontSize.h6};
+    ${active && `background-color: ${theme.colors.main};`}
+    ${active && `color: ${theme.colors.mainText};`}
   `,
 );
 
@@ -161,14 +164,15 @@ export const RadioBox = styled.div<Props.CssProps>(
     border-radius: 50%;
     border: ${theme.border.small};
     color: ${theme.colors.mainBg};
+    ${active && `border-color: ${theme.colors.main};`}
 
     &::after {
       content: '';
       display: inline-block;
-      width: ${cssSize(3.5)};
-      height: ${cssSize(3.5)};
+      width: ${cssSize(3)};
+      height: ${cssSize(3)};
       border-radius: 50%;
-      ${active && `background-color: ${theme.colors.mainBg};`}
+      ${active && `background-color: ${theme.colors.main};`}
     }
   `,
 );

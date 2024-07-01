@@ -1,5 +1,5 @@
-import { Row } from 'src/lib/styled/Flex';
-import { HeaderContainer, HeaderContent } from 'src/lib/styled/Header';
+import { Row } from 'src/lib/base/Styled/Flex';
+import { HeaderContainer, HeaderContent } from 'src/lib/base/Styled/Header';
 
 const Header = () => {
   return (

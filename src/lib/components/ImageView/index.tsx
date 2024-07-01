@@ -1,5 +1,5 @@
-import { Card } from 'src/lib/styled/Containers';
-import { Image } from 'src/lib/styled/Images';
+import { Card } from 'src/lib/base/Styled/Containers';
+import { Image } from 'src/lib/base/Styled/Images';
 
 const ImageView = (props: Props.ImageView) => {
   const { image } = props;
