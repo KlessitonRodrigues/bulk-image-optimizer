@@ -145,11 +145,11 @@ export const CheckBox = styled.div<Props.CssProps>(
     width: ${cssSize(6)};
     height: ${cssSize(6)};
     margin-top: ${cssSize(0.5)};
-    border-radius: 4px;
+    padding: ${cssSize(0.5)};
+    border-radius: 5px;
     border: ${theme.border.small};
-    font-size: ${theme.fontSize.h6};
-    ${active && `background-color: ${theme.colors.main};`}
-    ${active && `color: ${theme.colors.mainText};`}
+    ${active && `border-color: ${theme.colors.main};`}
+    ${active && `color: ${theme.colors.main};`}
   `,
 );
 

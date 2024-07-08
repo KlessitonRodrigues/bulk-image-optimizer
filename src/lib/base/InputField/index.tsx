@@ -105,7 +105,13 @@ const InputField = (props: Props.InputField) => {
     return (
       <Label onClick={() => onChange && onChange('')}>
         <Row>
-          <CheckBox active={actived}>{actived && '✔'}</CheckBox>
+          <CheckBox active={actived}>
+            {actived && (
+              <svg stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            )}
+          </CheckBox>
           <b>{label}</b>
         </Row>
       </Label>

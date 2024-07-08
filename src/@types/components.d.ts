@@ -92,12 +92,13 @@ declare namespace Props {
   };
 
   type Button = {
-    type: 'default' | 'main' | 'outline' | 'danger';
+    type: 'default' | 'main' | 'outline' | 'danger' | 'icon';
     label?: string;
     disabled?: boolean;
     IconLeft?: React.ReactNode;
     IconRight?: React.ReactNode;
     onClick?: () => void;
+    children?: React.ReactNode;
   };
 
   type Form<T> = {

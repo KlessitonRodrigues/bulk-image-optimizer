@@ -1,8 +1,8 @@
 import { DragEventHandler, useMemo, useState } from 'react';
+import { IoClose, IoCloudUploadOutline } from 'react-icons/io5';
 
 import useImages from 'src/hooks/useImages';
 import Button from 'src/lib/base/Buttons';
-import Icons from 'src/lib/base/Icons';
 import If from 'src/lib/base/If';
 import { Card } from 'src/lib/base/Styled/Containers';
 import { Column, Row } from 'src/lib/base/Styled/Flex';
@@ -54,7 +54,7 @@ const FileUpdaloadModal = (props: Props.FileUploadModal) => {
     return files.map((file, i) => {
       const imgUrl = URL.createObjectURL(file);
       return (
-        <Column w="8rem" key={file.name + i}>
+        <Column w="10rem" key={file.name + i}>
           <Image src={imgUrl} />
           <VerySmall>{limitString(file.name, 14)}</VerySmall>
         </Column>
@@ -72,7 +72,9 @@ const FileUpdaloadModal = (props: Props.FileUploadModal) => {
                 <h3>Upload Images</h3>
               </Row>
               <Row right>
-                <Icons size={8} type="close" onPress={onClose} />
+                <Button type="icon" onClick={onClose}>
+                  <IoClose size={28} />
+                </Button>
               </Row>
             </Row>
           </div>
@@ -85,7 +87,7 @@ const FileUpdaloadModal = (props: Props.FileUploadModal) => {
             />
             <If check={!files.length}>
               <Column>
-                <Icons size={12} type="image" />
+                <IoCloudUploadOutline size={64} />
                 <p>Select or Drop files here</p>
               </Column>
             </If>
@@ -100,14 +102,14 @@ const FileUpdaloadModal = (props: Props.FileUploadModal) => {
             <Button
               type="outline"
               label="Clean"
-              IconLeft={<Icons size={6} type="close" />}
+              IconLeft={<IoClose size={20} type="close" />}
               disabled={!files.length}
               onClick={() => setFiles([])}
             />
             <Button
               type="main"
               label="Upload"
-              IconLeft={<Icons size={6} type="image" />}
+              IconLeft={<IoCloudUploadOutline size={20} />}
               disabled={!files.length}
               onClick={setImageFiles}
             />

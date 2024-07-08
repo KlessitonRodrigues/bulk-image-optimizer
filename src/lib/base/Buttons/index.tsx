@@ -1,7 +1,7 @@
-import { DangerButton, DefaultButton, MainButton, OutlineButton } from './styled';
+import { DangerButton, DefaultButton, IconButton, MainButton, OutlineButton } from './styled';
 
 const Button = (props: Props.Button) => {
-  const { type, label, disabled, onClick, IconLeft, IconRight } = props;
+  const { type, label, disabled, onClick, IconLeft, IconRight, children } = props;
 
   if (type === 'default') {
     return (
@@ -40,6 +40,14 @@ const Button = (props: Props.Button) => {
         {label}
         {IconRight}
       </DangerButton>
+    );
+  }
+
+  if (type === 'icon') {
+    return (
+      <IconButton disabled={disabled} onClick={onClick}>
+        {children}
+      </IconButton>
     );
   }
 };

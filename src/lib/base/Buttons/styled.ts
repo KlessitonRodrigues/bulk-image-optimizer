@@ -17,6 +17,8 @@ export const DefaultButton = styled.button<Props.CssProps>(
     box-shadow: ${theme.shadow.small};
     font-size: ${theme.fontSize.label};
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
     transition: opacity 0.2s;
     cursor: pointer;
 
@@ -42,6 +44,13 @@ export const DangerButton = styled(DefaultButton)(
   ({ theme }) => css`
     background-color: ${theme.colors.red};
     color: ${theme.colors.mainText};
+  `,
+);
+
+export const IconButton = styled(DefaultButton)(
+  () => css`
+    background-color: transparent;
+    box-shadow: none;
   `,
 );
 
