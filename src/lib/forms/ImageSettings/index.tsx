@@ -48,7 +48,7 @@ const ImageSettingsForm = (props: Props.Form<typeof initiatState>) => {
             value={form.height}
             onChange={height => setForm({ ...form, height })}
           />
-          <Space mt="1rem">
+          <Space mt="1.3rem">
             <InputField
               type="checkbox"
               label="Keep Ration"

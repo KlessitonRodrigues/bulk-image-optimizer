@@ -81,7 +81,9 @@ declare namespace Props {
       | 'number'
       | 'switch'
       | 'textarea'
-      | 'range';
+      | 'range'
+      | 'date'
+      | 'time';
     label?: string;
     placeholder?: string;
     value?: string;

@@ -20,8 +20,9 @@ export const Label = styled.label(
     flex-direction: column;
     gap: ${cssSize(2)};
     cursor: pointer;
-    font-size: ${theme.fontSize.label};
     user-select: none;
+    font-size: ${theme.fontSize.label};
+    font-family: 'Roboto', sans-serif;
 
     &:hover b {
       color: ${theme.colors.main};
@@ -37,10 +38,11 @@ export const InputBox = styled.label(
     background-color: ${theme.colors.bg1};
     border-radius: ${theme.radius.small};
     border: ${theme.border.small};
-    padding: ${cssSize(3)} ${cssSize(2)};
+    padding: ${cssSize(3)};
+    cursor: pointer;
 
     & svg {
-      transform: scale(1.8);
+      transform: scale(1.4);
     }
   `,
 );
@@ -51,6 +53,7 @@ export const Input = styled.input(
     background-color: transparent;
     border: none;
     font-size: ${theme.fontSize.body};
+    font-weight: bold;
     padding: 0 ${cssSize(2)};
   `,
 );
@@ -142,8 +145,8 @@ export const CheckBox = styled.div<Props.CssProps>(
     display: flex;
     align-items: center;
     justify-content: center;
-    width: ${cssSize(6)};
-    height: ${cssSize(6)};
+    width: ${cssSize(7)};
+    height: ${cssSize(7)};
     margin-top: ${cssSize(0.5)};
     padding: ${cssSize(0.5)};
     border-radius: 5px;

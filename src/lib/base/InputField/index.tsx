@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
+
 import {
   CheckBox,
   Input,
@@ -12,6 +15,7 @@ import {
 
 const InputField = (props: Props.InputField) => {
   const { type, label, placeholder, actived, value, IconLeft, IconRight, onChange } = props;
+  const [visible, setVisible] = useState(false);
 
   if (type === 'text') {
     return (
@@ -56,12 +60,14 @@ const InputField = (props: Props.InputField) => {
         <InputBox>
           {IconLeft}
           <Input
-            type="password"
+            type={visible ? 'text' : 'password'}
             placeholder={placeholder}
             value={value}
             onChange={ev => onChange && onChange(ev.target.value)}
           />
-          {IconRight}
+          <span onClick={() => setVisible(!visible)}>
+            {visible ? <IoEyeOffOutline size={16} /> : <IoEyeOutline size={16} />}
+          </span>
         </InputBox>
       </Label>
     );
@@ -90,6 +96,32 @@ const InputField = (props: Props.InputField) => {
     );
   }
 
+  if (type === 'date') {
+    return (
+      <Label>
+        <b>{label}</b>
+        <InputBox>
+          <Input
+            type="date"
+            value={value}
+            onChange={ev => onChange && onChange(new Date(ev.target.value).toISOString())}
+          />
+        </InputBox>
+      </Label>
+    );
+  }
+
+  if (type === 'time') {
+    return (
+      <Label>
+        <b>{label}</b>
+        <InputBox>
+          <Input type="time" value={value} onChange={ev => onChange && onChange(ev.target.value)} />
+        </InputBox>
+      </Label>
+    );
+  }
+
   if (type === 'switch') {
     return (
       <Label>
@@ -107,7 +139,7 @@ const InputField = (props: Props.InputField) => {
         <Row>
           <CheckBox active={actived}>
             {actived && (
-              <svg stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+              <svg stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
             )}
