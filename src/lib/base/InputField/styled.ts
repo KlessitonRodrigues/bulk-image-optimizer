@@ -54,7 +54,7 @@ export const Input = styled.input(
     border: none;
     font-size: ${theme.fontSize.body};
     font-weight: bold;
-    padding: 0 ${cssSize(2)};
+    padding: ${cssSize(1)} ${cssSize(2)} 0;
   `,
 );
 

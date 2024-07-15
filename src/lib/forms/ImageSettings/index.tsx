@@ -36,6 +36,7 @@ const ImageSettingsForm = (props: Props.Form<typeof initiatState>) => {
           <InputField
             type="number"
             label="Largura"
+            IconRight="px"
             value={form.width}
             onChange={width => setForm({ ...form, width })}
           />
@@ -45,6 +46,7 @@ const ImageSettingsForm = (props: Props.Form<typeof initiatState>) => {
           <InputField
             type="number"
             label="Altura"
+            IconRight="px"
             value={form.height}
             onChange={height => setForm({ ...form, height })}
           />

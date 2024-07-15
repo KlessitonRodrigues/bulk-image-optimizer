@@ -26,10 +26,6 @@ export const ModalHeader = styled.div(
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: ${cssSize(350)};
-    padding: ${cssSize(4)};
-    background-image: ${gradients.purple};
-    color: #fff;
   `,
 );
 

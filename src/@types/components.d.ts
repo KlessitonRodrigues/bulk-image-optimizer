@@ -88,8 +88,8 @@ declare namespace Props {
     placeholder?: string;
     value?: string;
     actived?: boolean;
-    IconLeft?: React.ReactNode;
-    IconRight?: React.ReactNode;
+    IconLeft?: React.ReactNode | 'string';
+    IconRight?: React.ReactNode | 'string';
     onChange?: (value: string) => void;
   };
 
@@ -105,5 +105,11 @@ declare namespace Props {
 
   type Form<T> = {
     onSubmit?: (form: T) => void;
+  };
+
+  type FileDropZone = {
+    fileList: File[];
+    onChange?: (value: File[]) => void;
+    onRemove?: (file: File) => void;
   };
 }
