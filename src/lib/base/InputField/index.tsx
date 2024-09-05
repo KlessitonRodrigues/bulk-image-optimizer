@@ -77,7 +77,11 @@ const InputField = (props: Props.InputField) => {
     return (
       <Label>
         <b>{label}</b>
-        <TextArea value={value} onChange={ev => onChange && onChange(ev.target.value)} />
+        <TextArea
+          value={value}
+          placeholder={placeholder}
+          onChange={ev => onChange && onChange(ev.target.value)}
+        />
       </Label>
     );
   }
@@ -126,7 +130,7 @@ const InputField = (props: Props.InputField) => {
     return (
       <Label>
         <Row>
-          <Switch active={!actived} onClick={() => onChange && onChange('')} />
+          <Switch active={!actived} onClick={() => onChange && onChange(value || label || '')} />
           <b>{label}</b>
         </Row>
       </Label>
@@ -135,7 +139,7 @@ const InputField = (props: Props.InputField) => {
 
   if (type === 'checkbox') {
     return (
-      <Label onClick={() => onChange && onChange('')}>
+      <Label onClick={() => onChange && onChange(value || label || '')}>
         <Row>
           <CheckBox active={actived}>
             {actived && (
@@ -152,7 +156,7 @@ const InputField = (props: Props.InputField) => {
 
   if (type === 'radio') {
     return (
-      <Label onClick={() => onChange && onChange('')}>
+      <Label onClick={() => onChange && onChange(value || label || '')}>
         <Row>
           <RadioBox active={actived} />
           <b>{label}</b>

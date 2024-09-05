@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import useImages from 'src/hooks/useImages';
 import Button from 'src/lib/base/Buttons';
 import Icons from 'src/lib/base/Icons';
+import InputField from 'src/lib/base/InputField';
 import { Card, Section } from 'src/lib/base/Styled/Containers';
 import { Hr } from 'src/lib/base/Styled/Divisors';
 import ImageView from 'src/lib/components/ImageView';
@@ -37,6 +38,16 @@ const OptimizerPage = () => {
             onClick={() => setUploadModal(!uploadModal)}
             IconLeft={<Icons size={6} type="image" />}
           />
+          <InputField type="date" label="Date" />
+          <InputField type="time" label="Time" />
+          <InputField type="range" label="Range" value="20" />
+          <InputField type="password" label="Password" placeholder="Digite uma Senha" />
+          <InputField type="number" label="Number" placeholder="Digite uma Número" />
+          <InputField type="radio" label="Radio" />
+          <InputField type="checkbox" label="Checkbox" />
+          <InputField type="switch" label="Switch" />
+          <InputField type="text" label="Text" placeholder="Digite um nome" />
+          <InputField type="textarea" label="TextArea" placeholder="Digite um texto" />
         </Card>
       </Section>
       <FileUpdaloadModal show={uploadModal} onClose={() => setUploadModal(!uploadModal)} />

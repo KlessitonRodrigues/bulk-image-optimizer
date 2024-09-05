@@ -13,7 +13,6 @@ export const DropBox = styled.div(
     border: ${theme.border.small};
     border-radius: ${theme.radius.large};
     padding: ${cssSize(4)};
-    cursor: pointer;
   `,
 );
 

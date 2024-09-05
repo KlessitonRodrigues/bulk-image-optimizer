@@ -10,7 +10,7 @@ export const DefaultButton = styled.button<Props.CssProps>(
     gap: ${cssSize(2)};
     width: ${w ?? 'fit-content'};
     height: ${h ?? cssSize(12)};
-    padding: 0 ${p ?? cssSize(4)};
+    padding: 0 ${p ?? cssSize(6)};
     background-color: ${theme.colors.bg1};
     color: ${theme.colors.text2};
     border-radius: ${theme.radius.small};

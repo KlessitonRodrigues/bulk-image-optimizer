@@ -18,7 +18,7 @@ export const Label = styled.label(
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: ${cssSize(2)};
+    gap: ${cssSize(3)};
     cursor: pointer;
     user-select: none;
     font-size: ${theme.fontSize.label};
@@ -36,9 +36,9 @@ export const InputBox = styled.label(
     display: flex;
     align-items: center;
     background-color: ${theme.colors.bg1};
-    border-radius: ${theme.radius.small};
+    border-radius: ${theme.radius.medium};
     border: ${theme.border.small};
-    padding: ${cssSize(3)};
+    padding: ${cssSize(3)} ${cssSize(4)};
     cursor: pointer;
 
     & svg {
@@ -53,8 +53,7 @@ export const Input = styled.input(
     background-color: transparent;
     border: none;
     font-size: ${theme.fontSize.body};
-    font-weight: bold;
-    padding: ${cssSize(1)} ${cssSize(2)} 0;
+    padding: ${cssSize(1)};
   `,
 );
 
@@ -103,6 +102,7 @@ export const TextArea = styled.textarea(
     border-radius: ${theme.radius.medium};
     background-color: ${theme.colors.bg1};
     font-size: ${theme.fontSize.body};
+    font-family: 'Roboto', sans-serif;
   `,
 );
 
@@ -110,10 +110,10 @@ export const RangeInput = styled.input(
   ({ theme }) => css`
     width: 100%;
     height: ${cssSize(1)};
+    margin: ${cssSize(1)} 0 ${cssSize(3)};
     appearance: none;
     background: ${theme.colors.bg4};
     border-radius: ${theme.radius.medium};
-    margin: ${cssSize(1)} 0 ${cssSize(3)};
     position: relative;
 
     &::-webkit-slider-thumb {
@@ -151,8 +151,8 @@ export const CheckBox = styled.div<Props.CssProps>(
     padding: ${cssSize(0.5)};
     border-radius: 5px;
     border: ${theme.border.small};
-    ${active && `border-color: ${theme.colors.main};`}
-    ${active && `color: ${theme.colors.main};`}
+    ${active && `background-color: ${theme.colors.main};`}
+    ${active && `color: ${theme.colors.mainText};`}
   `,
 );
 
