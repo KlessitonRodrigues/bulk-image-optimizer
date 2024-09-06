@@ -10,6 +10,7 @@ import ImageView from 'src/lib/components/ImageView';
 import Page from 'src/lib/components/Page';
 import ImageSettingsForm from 'src/lib/forms/ImageSettings';
 import FileUpdaloadModal from 'src/lib/modals/FileUpload';
+import { toDateInput, toTimeInput } from 'src/utils/dates';
 
 const OptimizerPage = () => {
   const { images } = useImages();
@@ -38,8 +39,18 @@ const OptimizerPage = () => {
             onClick={() => setUploadModal(!uploadModal)}
             IconLeft={<Icons size={6} type="image" />}
           />
-          <InputField type="date" label="Date" />
-          <InputField type="time" label="Time" />
+          <InputField
+            type="date"
+            label="Date"
+            value={toDateInput(new Date())}
+            onChange={console.log}
+          />
+          <InputField
+            type="time"
+            label="Time"
+            value={toTimeInput(new Date())}
+            onChange={console.log}
+          />
           <InputField type="range" label="Range" value="20" />
           <InputField type="password" label="Password" placeholder="Digite uma Senha" />
           <InputField type="number" label="Number" placeholder="Digite uma Número" />

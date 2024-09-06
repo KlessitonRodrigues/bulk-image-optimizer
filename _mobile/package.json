@@ -1,0 +1,31 @@
+{
+  "name": "com.example.hello",
+  "displayName": "Helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-android": "cordova build android --debug",
+    "build-android-prod": "cordova build android --release --buildConfig=./build.json",
+    "build-electron": "cordova build electron --debug",
+    "build-electron-prod": "cordova build electron --release",
+    "add-android": "cordova platform add android",
+    "add-electron": "cordova platform add electron",
+    "run-android": "cordova run android",
+    "run-electron": "cordova run electron",
+    "run-web": "cordova serve"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova": "^12.0.0",
+    "cordova-android": "^13.0.0",
+    "cordova-electron": "^4.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "electron"
+    ],
+    "plugins": {}
+  }
+}

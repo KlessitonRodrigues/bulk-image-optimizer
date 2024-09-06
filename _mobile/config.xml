@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.klessrds.personalcv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Klessiton CV</name>
+    <description>Profile app of Klessiton</description>
+    <author email="klessitom@gmail.com" href="https://djc7924qzcvck.cloudfront.net/">
+        Klessitom Rodrigues
+    </author>
+
+    <content src="./app/index.html" />
+    <icon src="./www/resources/icon.png" />
+
+    <!-- Android Resources -->
+    <platform name="android">
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#ffffff" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="./www/resources/splash.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
+    </platform>
+
+    <!-- Hooks -->
+    <platform name="android">
+        <hook type="before_build" src="scripts/beforeBuild.js" />
+        <hook type="before_run" src="scripts/beforeBuild.js" />
+    </platform>
+    <platform name="electron">
+        <hook type="before_build" src="scripts/beforeBuild.js" />
+        <hook type="before_run" src="scripts/beforeBuild.js" />
+    </platform>
+
+    <!-- Security Related Settings -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

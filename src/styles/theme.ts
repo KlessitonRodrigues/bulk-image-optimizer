@@ -59,7 +59,7 @@ export const defaultThemeDark = {
     bg1: mcolors.black,
     bg2: ac.gray['900'],
     bg3: ac.gray['800'],
-    bg4: ac.gray['800'],
+    bg4: ac.gray['700'],
     text1: ac.gray['500'],
     text2: ac.gray['600'],
     text3: ac.gray['700'],

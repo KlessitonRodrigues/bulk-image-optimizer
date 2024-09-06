@@ -108,6 +108,7 @@ const InputField = (props: Props.InputField) => {
           <Input
             type="date"
             value={value}
+            placeholder={placeholder}
             onChange={ev => onChange && onChange(new Date(ev.target.value).toISOString())}
           />
         </InputBox>
@@ -120,7 +121,12 @@ const InputField = (props: Props.InputField) => {
       <Label>
         <b>{label}</b>
         <InputBox>
-          <Input type="time" value={value} onChange={ev => onChange && onChange(ev.target.value)} />
+          <Input
+            type="time"
+            value={value}
+            placeholder={placeholder}
+            onChange={ev => onChange && onChange(ev.target.value)}
+          />
         </InputBox>
       </Label>
     );
