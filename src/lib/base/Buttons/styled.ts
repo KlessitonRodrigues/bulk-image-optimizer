@@ -51,6 +51,7 @@ export const IconButton = styled(DefaultButton)(
   () => css`
     background-color: transparent;
     box-shadow: none;
+    color: inherit;
   `,
 );
 

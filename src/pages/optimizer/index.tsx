@@ -59,6 +59,12 @@ const OptimizerPage = () => {
           <InputField type="switch" label="Switch" />
           <InputField type="text" label="Text" placeholder="Digite um nome" />
           <InputField type="textarea" label="TextArea" placeholder="Digite um texto" />
+          <InputField
+            type="color"
+            label="Color"
+            placeholder="Digite um texto"
+            onChange={v => console.log(v)}
+          />
         </Card>
       </Section>
       <FileUpdaloadModal show={uploadModal} onClose={() => setUploadModal(!uploadModal)} />

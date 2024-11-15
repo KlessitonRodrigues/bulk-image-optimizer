@@ -1,8 +1,16 @@
 import { useState } from 'react';
-import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
+import {
+  IoBrush,
+  IoBrushOutline,
+  IoCalendarOutline,
+  IoEyeOffOutline,
+  IoEyeOutline,
+  IoTimeOutline,
+} from 'react-icons/io5';
 
 import {
   CheckBox,
+  FitInput,
   Input,
   InputBox,
   Label,
@@ -105,7 +113,8 @@ const InputField = (props: Props.InputField) => {
       <Label>
         <b>{label}</b>
         <InputBox>
-          <Input
+          <IoCalendarOutline />
+          <FitInput
             type="date"
             value={value}
             placeholder={placeholder}
@@ -121,7 +130,8 @@ const InputField = (props: Props.InputField) => {
       <Label>
         <b>{label}</b>
         <InputBox>
-          <Input
+          <IoTimeOutline />
+          <FitInput
             type="time"
             value={value}
             placeholder={placeholder}
@@ -167,6 +177,23 @@ const InputField = (props: Props.InputField) => {
           <RadioBox active={actived} />
           <b>{label}</b>
         </Row>
+      </Label>
+    );
+  }
+
+  if (type === 'color') {
+    return (
+      <Label>
+        <b>{label}</b>
+        <InputBox>
+          <IoBrushOutline />
+          <FitInput
+            type="color"
+            value={value}
+            placeholder={placeholder}
+            onChange={ev => onChange && onChange(ev.target.value)}
+          />
+        </InputBox>
       </Label>
     );
   }

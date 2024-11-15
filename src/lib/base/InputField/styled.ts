@@ -42,7 +42,9 @@ export const InputBox = styled.label(
     cursor: pointer;
 
     & svg {
-      transform: scale(1.4);
+      transform: scale(1.6);
+      margin-right: ${cssSize(3)};
+      display: block;
     }
   `,
 );
@@ -56,6 +58,14 @@ export const Input = styled.input(
     padding: ${cssSize(1)};
   `,
 );
+
+export const FitInput = styled(Input)`
+  ${() => css`
+    width: fit-content;
+    min-width: ${cssSize(18)};
+    min-height: ${cssSize(10)};
+  `}
+`;
 
 export const Switch = styled.div<Props.CssProps>(
   ({ theme, active }) => css`
